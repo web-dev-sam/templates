@@ -1,0 +1,25 @@
+{
+  "name": "webry-monorepo-template",
+  "version": "0.0.5",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@10.8.3",
+  "engines": {
+    "node": ">=v18.16.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "generate": "turbo run generate",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "@webry-monorepo-template/config-eslint": "*",
+    "turbo": "^2.1.3"
+  }
+}

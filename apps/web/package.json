@@ -1,0 +1,19 @@
+{
+  "name": "@webry-monorepo-template/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "devDependencies": {
+    "@webry-monorepo-template/config-typescript": "*",
+    "@webry-monorepo-template/ui": "*",
+    "nuxt": "3.13.2"
+  }
+}

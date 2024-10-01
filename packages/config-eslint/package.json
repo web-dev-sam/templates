@@ -1,0 +1,17 @@
+{
+  "name": "@webry-monorepo-template/config-eslint",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@antfu/eslint-config": "^3.7.3",
+    "eslint": "^9.11.1",
+    "eslint-config-turbo": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
