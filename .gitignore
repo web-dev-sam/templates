@@ -33,3 +33,5 @@ npm-debug.log*
 
 # vitepress
 **/.vitepress/dist/**
+**/.vitepress/cache/**
+**/*.log

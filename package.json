@@ -3,8 +3,10 @@
   "version": "0.0.5",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/docs",
+    "apps/web",
+    "packages/config-eslint",
+    "packages/config-typescript"
   ],
   "packageManager": "npm@10.8.3",
   "engines": {

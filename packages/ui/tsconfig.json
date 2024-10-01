@@ -1,8 +1,0 @@
-{
-  "extends": "@webry-monorepo-template/config-typescript/base.json",
-  "include": [
-    "env.d.ts",
-    "./**/*",
-    "./**/*.vue"
-  ]
-}
