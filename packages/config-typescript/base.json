@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
   "compilerOptions": {
+    "checkJs": false,
     "composite": false,
     "declaration": true,
     "declarationMap": true,
@@ -10,14 +10,17 @@
     "inlineSources": false,
     "isolatedModules": true,
     "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
     "noImplicitAny": true,
     "noImplicitOverride": true,
     "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true
   },
-  "exclude": ["node_modules"]
+  "display": "Default",
+  "exclude": [
+    "node_modules"
+  ]
 }
