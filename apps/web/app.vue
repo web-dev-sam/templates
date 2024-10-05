@@ -1,3 +1,14 @@
+<script setup lang="ts">
+// Imports
+// Props & Emits
+// State
+// Computed
+// Normal code
+// Lifecycle
+// Watchers
+// Functions
+</script>
+
 <template>
   <div class="text-center">
     <h1 class="text-5xl font-bold mt-96 mb-4">

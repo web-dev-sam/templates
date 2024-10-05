@@ -6,23 +6,19 @@
   "workspaces": [
     "apps/docs",
     "apps/web",
-    "packages/config-eslint",
-    "packages/config-typescript"
+    "configs/prettier"
   ],
-  "packageManager": "npm@10.8.3",
   "engines": {
-    "node": ">=v18.16.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "turbo run build",
-    "generate": "turbo run generate",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
-    "test": "turbo run test"
+    "dev": "cd apps/web && npm run dev",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
+  "prettier": "./configs/prettier/.prettierrc.json",
   "devDependencies": {
-    "@webry-monorepo-template/config-eslint": "*",
-    "turbo": "^2.1.3"
+    "oxlint": "^0.9.9",
+    "prettier": "^3.3.3"
   }
 }

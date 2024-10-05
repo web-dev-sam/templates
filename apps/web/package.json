@@ -8,12 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
-    "@webry-monorepo-template/config-typescript": "*",
     "nuxt": "3.13.2",
     "shadcn-nuxt": "^0.10.4"
   },

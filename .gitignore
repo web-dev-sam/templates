@@ -23,12 +23,6 @@ npm-debug.log*
 .env.production.local
 **/.env
 
-# turbo
-.turbo
-
-# IDEs
-.idea
-
 # nuxt
 .output
 
