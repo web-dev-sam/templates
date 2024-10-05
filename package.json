@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "cd apps/web && npm run dev",
-    "check": "biome check",
+    "check": "biome check .",
     "format": "biome format --write ."
   },
   "devDependencies": {
