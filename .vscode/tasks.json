@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev Web",
+      "command": "cd apps/web && npm run dev",
+      "type": "shell",
+      "problemMatcher": ["$tsc"],
+      "presentation": {
+        "reveal": "always",
+        "clear": false
+      },
+      "options": {
+        "statusbar": {
+          "detail": "Run Web",
+          "label": ""
+        }
+      },
+      "group": "none",
+      "icon": {
+        "id": "vm"
+      }
+    },
+    {
+      "label": "Dev Docs",
+      "command": "cd apps/docs && npm run dev",
+      "type": "shell",
+      "problemMatcher": ["$tsc"],
+      "presentation": {
+        "reveal": "always",
+        "clear": false
+      },
+      "options": {
+        "statusbar": {
+          "detail": "Run Docs",
+          "label": ""
+        }
+      },
+      "group": "none",
+      "icon": {
+        "id": "book"
+      }
+    }
+  ]
+}
