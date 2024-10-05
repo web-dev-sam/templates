@@ -30,3 +30,13 @@ npm-debug.log*
 **/.vitepress/dist/**
 **/.vitepress/cache/**
 **/*.log
+
+# Remove when biome supports nested .gitignore files
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist

@@ -1,9 +1,0 @@
-{
-  "name": "@webry-monorepo-template/prettier",
-  "version": "0.0.0",
-  "main": ".prettierrc.json",
-  "private": true,
-  "dependencies": {
-    "prettier-plugin-tailwindcss": "^0.6.8"
-  }
-}

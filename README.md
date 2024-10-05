@@ -1,5 +1,4 @@
 # Monorepo for TS w/ Linting and Formatting
 
-- Linting using oxc
-- Format using prettier
+- Linting & Formatting using biome
 - Monorepo using npm workspaces

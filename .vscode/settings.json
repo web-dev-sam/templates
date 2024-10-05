@@ -5,5 +5,9 @@
     "source.sortImports": "always"
   },
   "editor.formatOnSave": true,
-  "oxc_language_server.run": "onSave"
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.indentSize": 2,
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }

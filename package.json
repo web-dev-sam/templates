@@ -3,22 +3,16 @@
   "version": "0.0.5",
   "private": true,
   "type": "module",
-  "workspaces": [
-    "apps/docs",
-    "apps/web",
-    "configs/prettier"
-  ],
+  "workspaces": ["apps/docs", "apps/web"],
   "engines": {
     "node": ">=20.0.0"
   },
   "scripts": {
     "dev": "cd apps/web && npm run dev",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix"
+    "check": "biome check",
+    "format": "biome format --write ."
   },
-  "prettier": "./configs/prettier/.prettierrc.json",
   "devDependencies": {
-    "oxlint": "^0.9.9",
-    "prettier": "^3.3.3"
+    "@biomejs/biome": "1.9.3"
   }
 }
