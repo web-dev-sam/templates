@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/docs", "apps/web"],
+  "workspaces": ["apps/docs", "apps/web", "configs/tailwind"],
   "engines": {
     "node": ">=20.0.0"
   },
