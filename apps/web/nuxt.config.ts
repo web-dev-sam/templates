@@ -9,9 +9,19 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
+      title: "Welcome",
       bodyAttrs: {
         class: "dark",
       },
     },
+  },
+  devtools: {
+    enabled: false,
+  },
+  devServer: {
+    port: 3000,
   },
 })

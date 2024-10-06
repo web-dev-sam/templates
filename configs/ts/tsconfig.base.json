@@ -17,8 +17,11 @@
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "strictNullChecks": true,
+    "lib": ["ESNext"],
+    "typeRoots": ["types"]
   },
   "display": "Default",
-  "exclude": ["node_modules"]
+  "exclude": []
 }

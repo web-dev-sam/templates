@@ -1,0 +1,17 @@
+{
+  "name": "@webry-monorepo-template/playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test:web": "cross-env BASE_URL=http://localhost:3000 playwright test e2e/common e2e/web",
+    "test:docs": "cross-env BASE_URL=http://localhost:3001 playwright test e2e/common e2e/docs"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.47.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

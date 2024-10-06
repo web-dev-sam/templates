@@ -3,7 +3,12 @@
   "version": "0.0.5",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/docs", "apps/web", "configs/tailwind"],
+  "workspaces": [
+    "apps/docs",
+    "apps/web",
+    "configs/tailwind",
+    "tests"
+  ],
   "engines": {
     "node": ">=20.0.0"
   },
@@ -13,6 +18,8 @@
     "format": "biome format --write ."
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.3"
+    "@biomejs/biome": "1.9.3",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^20.16.10"
   }
 }
