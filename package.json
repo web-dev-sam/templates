@@ -1,14 +1,9 @@
 {
   "name": "webry-monorepo-template",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
-  "workspaces": [
-    "apps/docs",
-    "apps/web",
-    "configs/tailwind",
-    "tests"
-  ],
+  "workspaces": ["apps/docs", "apps/web", "configs/tailwind", "tests"],
   "engines": {
     "node": ">=20.0.0"
   },
