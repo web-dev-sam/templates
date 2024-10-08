@@ -1,7 +1,7 @@
 __**Work in Progress**__
 
 # Monorepo for TS w/ Linting and Formatting
-- Monorepo using npm workspaces
+- Monorepo using pnpm workspaces
   - Example project 1: Docs with Vitepress
   - Example project 2: Web App with Nuxt
   - Example configs: TypeScript, Tailwind, Biome
@@ -10,5 +10,5 @@ __**Work in Progress**__
 
 ## Gettings Started
 - Replace all `webry-monorepo-template` package names with your own
-- `npm i`
-- Check npm scripts and structure
+- `pnpm i`
+- Check pnpm scripts and structure

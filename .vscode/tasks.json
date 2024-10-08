@@ -3,7 +3,7 @@
   "tasks": [
     {
       "label": "Dev Web",
-      "command": "cd apps/web && npm run dev",
+      "command": "cd apps/web && pnpm run dev",
       "type": "shell",
       "problemMatcher": ["$tsc"],
       "presentation": {
@@ -23,7 +23,7 @@
     },
     {
       "label": "Dev Docs",
-      "command": "cd apps/docs && npm run dev",
+      "command": "cd apps/docs && pnpm run dev",
       "type": "shell",
       "problemMatcher": ["$tsc"],
       "presentation": {

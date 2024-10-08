@@ -20,8 +20,9 @@
     "strict": true,
     "strictNullChecks": true,
     "lib": ["ESNext"],
-    "typeRoots": ["types"]
+    "typeRoots": ["@types", "node_modules/@types"]
   },
   "display": "Default",
+  "include": ["**/*.d.ts"],
   "exclude": []
 }

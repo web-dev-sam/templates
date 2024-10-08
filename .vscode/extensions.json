@@ -1,3 +1,7 @@
 {
-  "recommendations": ["ms-playwright.playwright", "biomejs.biome"]
+  "recommendations": [
+    "ms-playwright.playwright",
+    "biomejs.biome",
+    "actboy168.tasks"
+  ]
 }

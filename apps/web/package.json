@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
-    "@webry-monorepo-template/tailwind": "*",
+    "@webry-monorepo-template/tailwind": "workspace:*",
     "nuxt": "3.13.2",
     "shadcn-nuxt": "^0.10.4"
   },
