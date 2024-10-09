@@ -2,6 +2,8 @@
   "recommendations": [
     "ms-playwright.playwright",
     "biomejs.biome",
-    "actboy168.tasks"
+    "actboy168.tasks",
+    "bradlc.vscode-tailwindcss",
+    "astro-build.astro-vscode"
   ]
 }

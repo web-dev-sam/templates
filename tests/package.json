@@ -4,8 +4,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test:web": "cross-env BASE_URL=http://localhost:3000 playwright test e2e/common e2e/web",
-    "test:docs": "cross-env BASE_URL=http://localhost:3001 playwright test e2e/common e2e/docs"
+    "test:all": "cross-env BASE_URL=http://localhost:3000 playwright test e2e/common e2e/web e2e/docs",
+    "test:docs": "cross-env BASE_URL=http://localhost:3001 playwright test e2e/common e2e/docs",
+    "test:web": "cross-env BASE_URL=http://localhost:3000 playwright test e2e/common e2e/web"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.0",

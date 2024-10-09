@@ -40,6 +40,26 @@
       "icon": {
         "id": "book"
       }
+    },
+    {
+      "label": "E2E Tests",
+      "command": "pnpm run test",
+      "type": "shell",
+      "problemMatcher": ["$tsc"],
+      "presentation": {
+        "reveal": "always",
+        "clear": false
+      },
+      "options": {
+        "statusbar": {
+          "detail": "Run E2E Tests",
+          "label": ""
+        }
+      },
+      "group": "none",
+      "icon": {
+        "id": "beaker"
+      }
     }
   ]
 }

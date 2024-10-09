@@ -1,7 +1,11 @@
-const animate = require("tailwindcss-animate")
+import typography from "@tailwindcss/typography"
+import type { Config } from "tailwindcss"
+import animate from "tailwindcss-animate"
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+// We want each package to be responsible for its own content.
+const config: Omit<Config, "content"> = {
+  darkMode: ["class"],
+  safelist: ["dark"],
   theme: {
     container: {
       center: true,
@@ -78,5 +82,8 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, typography()],
 }
+
+export type { Config } from "tailwindcss"
+export default config
