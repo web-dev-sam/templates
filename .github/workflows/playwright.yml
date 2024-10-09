@@ -23,7 +23,7 @@ jobs:
       run: pnpx playwright install --with-deps
 
     - name: Make wait-for-it.sh executable
-      run: chmod +x .github/scripts/wait-for-it.sh
+      run: chmod +x ./.github/scripts/wait-for-it.sh
     - name: Start development servers
       run: |
         pnpm run dev:web & 
