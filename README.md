@@ -1,3 +1,4 @@
+![E2E Tests Status](https://github.com/web-dev-sam/webry-monorepo-template/actions/workflows/playwright.yml/badge.svg)
 
 # Webry Monorepo
 - 💃 Nuxt _(Main Web App)_
