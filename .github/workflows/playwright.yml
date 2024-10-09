@@ -13,6 +13,8 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+    - name: Install wait-for-it
+      run: sudo apt-get update && sudo apt-get install -y wait-for-it
 
     - uses: pnpm/action-setup@v4
       with:
@@ -22,15 +24,13 @@ jobs:
     - name: Install Playwright Browsers
       run: pnpx playwright install --with-deps
 
-    - name: Make wait-for-it.sh executable
-      run: chmod +x ./.github/scripts/wait-for-it.sh
     - name: Start development servers
       run: |
         pnpm run dev:web & 
         pnpm run dev:docs &
         echo "Waiting for servers to start..."
-        ./.github/scripts/wait-for-it.sh localhost:3000 -t 60
-        ./.github/scripts/wait-for-it.sh localhost:3001 -t 60
+        wait-for-it localhost:3000 -t 60
+        wait-for-it localhost:3001 -t 60
 
     - name: Run Playwright tests
       run: pnpm run test
