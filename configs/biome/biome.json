@@ -24,5 +24,19 @@
       "quoteStyle": "double",
       "semicolons": "asNeeded"
     }
-  }
+  },
+  "overrides": [
+    {
+      "include": ["*.astro", "*.vue"],
+      "linter": {
+        "rules": {
+          "recommended": true,
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          }
+        }
+      }
+    }
+  ]
 }

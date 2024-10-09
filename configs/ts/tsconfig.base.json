@@ -1,28 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "checkJs": false,
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "lib": ["ESNext"],
     "typeRoots": ["@types", "node_modules/@types"]
-  },
-  "display": "Default",
-  "include": ["**/*.d.ts"],
-  "exclude": []
+  }
 }
