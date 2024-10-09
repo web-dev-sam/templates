@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "cd apps/web && pnpm run dev",
     "dev:web": "cd apps/web && pnpm run dev",
-    "dev:docs": "cd apps/web && pnpm run dev",
+    "dev:docs": "cd apps/docs && pnpm run dev",
     "check": "biome check .",
     "format": "biome format --write .",
     "test": "cd tests && pnpm run test:all",
