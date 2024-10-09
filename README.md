@@ -1,14 +1,15 @@
-__**Work in Progress**__
 
-# Monorepo for TS w/ Linting and Formatting
-- Monorepo using pnpm workspaces
-  - Example project 1: Docs with Vitepress
-  - Example project 2: Web App with Nuxt
-  - Example configs: TypeScript, Tailwind, Biome
-- Linting & Formatting using biome
-- E2E Tests using playwright
+# Webry Monorepo
+- 💃 Nuxt _(Main Web App)_
+- 🔮 Astro _(Docs or other static site)_
+- 💄 Tailwind _(The only way to do CSS)_
+- 🚄 Biome _(Linting & Formatting)_
+- ⛑️ Playwright _(E2E Tests)_
 
-## Gettings Started
+## Getting Started
 - Replace all `webry-monorepo-template` package names with your own
 - `pnpm i`
 - Check pnpm scripts and structure
+
+## Contribution
+It's only tested by me on WSL so I appreciate any contributions if you find a bug or have an idea...
