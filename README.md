@@ -5,6 +5,7 @@
 - 💄 Tailwind _(The only way to do CSS)_
 - 🚄 Biome _(Linting & Formatting)_
 - ⛑️ Playwright _(E2E Tests)_
+- ✨ VSCode Tasks _(Buttons > Typing)_
 
 ## Getting Started
 - Replace all `webry-monorepo-template` package names with your own
