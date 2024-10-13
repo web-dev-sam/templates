@@ -8,10 +8,7 @@ test.describe("No broken links", () => {
     for (const url of linkUrls) {
       await test.step(`Checking link: ${url}`, async () => {
         const response = await page.request.get(url)
-        expect(
-          [200, 999],
-          `${url} has no ok status code (${response.status()})`,
-        ).toContain(response.status())
+        expect([200, 999], `${url} has no ok status code (${response.status()})`).toContain(response.status())
       })
     }
   })
@@ -19,12 +16,8 @@ test.describe("No broken links", () => {
 
 async function getAllLinksFromPage(page: Page) {
   const allLinks = await page.getByRole("link").all()
-  const allHrefs = await Promise.all(
-    allLinks.map((link) => link.getAttribute("href")),
-  )
-  const relevantHrefs = allHrefs
-    .filter(Boolean)
-    .filter((href) => href.startsWith("http"))
+  const allHrefs = await Promise.all(allLinks.map((link) => link.getAttribute("href")))
+  const relevantHrefs = allHrefs.filter(Boolean).filter((href) => href.startsWith("http"))
 
   const validHrefs = new Set<string>()
   for (const link of relevantHrefs) {

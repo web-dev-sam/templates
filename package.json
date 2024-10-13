@@ -6,17 +6,18 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "prettier": "@webry-monorepo-template/prettier",
   "scripts": {
-    "dev": "cd apps/web && pnpm run dev",
     "dev:web": "cd apps/web && pnpm run dev",
     "dev:docs": "cd apps/docs && pnpm run dev",
-    "check": "biome check .",
-    "format": "biome format --write .",
     "test": "cd tests && pnpm run test:all",
     "test:web": "cd tests && pnpm run test:web",
-    "test:docs": "cd tests && pnpm run test:docs"
+    "test:docs": "cd tests && pnpm run test:docs",
+    "check": "biome check .",
+    "format": "biome format --write ."
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.3"
+    "@biomejs/biome": "1.9.3",
+    "@webry-monorepo-template/prettier": "workspace:*"
   }
 }

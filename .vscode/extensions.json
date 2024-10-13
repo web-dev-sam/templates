@@ -5,6 +5,7 @@
     "actboy168.tasks",
     "bradlc.vscode-tailwindcss",
     "astro-build.astro-vscode",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "esbenp.prettier-vscode"
   ]
 }

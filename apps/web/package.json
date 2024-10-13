@@ -2,6 +2,7 @@
   "name": "@webry-monorepo-template/web",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

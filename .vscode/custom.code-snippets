@@ -1,0 +1,386 @@
+{
+  // Place your workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+  // Placeholders with the same ids are connected.
+  "Vue SFC": {
+    "scope": "vue",
+    "prefix": "vue",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "// Imports",
+      "// Props & Emits",
+      "// State",
+      "// Computed",
+      "// Normal code",
+      "// Lifecycle",
+      "// Watchers",
+      "// Functions",
+      "$1",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>$2</div>",
+      "</template>",
+      "",
+      "<style scoped>$3</style>",
+    ],
+    "description": "Create SFC Boilerplate."
+  },
+  "Shadcn Table Import": {
+    "scope": "typescript",
+    "prefix": "cn_table",
+    "body": [
+      "import {",
+      "  Table,",
+      "  TableBody,",
+      "  TableCaption,",
+      "  TableCell,",
+      "  TableHead,",
+      "  TableHeader,",
+      "  TableRow,",
+      "} from '@/components/ui/table';"
+    ],
+    "description": "Import Shadcn Table Components"
+  },
+  "Shadcn Tooltip Import": {
+    "scope": "typescript",
+    "prefix": "cn_tooltip",
+    "body": [
+      "import { Button } from '@/components/ui/button'",
+      "import {",
+      "  Tooltip,",
+      "  TooltipContent,",
+      "  TooltipProvider,",
+      "  TooltipTrigger,",
+      "} from '@/components/ui/tooltip'"
+    ],
+    "description": "Import Shadcn Tooltip Components"
+  },
+  "Shadcn Tabs Import": {
+    "scope": "typescript",
+    "prefix": "cn_tabs",
+    "body": [
+      "import { Button } from '@/components/ui/button'",
+      "import {",
+      "  Card,",
+      "  CardContent,",
+      "  CardDescription,",
+      "  CardFooter,",
+      "  CardHeader,",
+      "  CardTitle,",
+      "} from '@/components/ui/card'",
+      "import {",
+      "  Tabs,",
+      "  TabsContent,",
+      "  TabsList,",
+      "  TabsTrigger,",
+      "} from '@/components/ui/tabs'"
+    ],
+    "description": "Import Shadcn Tabs Components"
+  },
+  "Shadcn Card Import": {
+    "scope": "typescript",
+    "prefix": "cn_card",
+    "body": [
+      "import {",
+      "  Card,",
+      "  CardContent,",
+      "  CardDescription,",
+      "  CardFooter,",
+      "  CardHeader,",
+      "  CardTitle,",
+      "} from '@/components/ui/card'"
+    ],
+    "description": "Import Shadcn Card Components"
+  },
+  "Shadcn Select Import": {
+    "scope": "typescript",
+    "prefix": "cn_select",
+    "body": [
+      "import {",
+      "  Select,",
+      "  SelectContent,",
+      "  SelectGroup,",
+      "  SelectItem,",
+      "  SelectLabel,",
+      "  SelectTrigger,",
+      "  SelectValue,",
+      "} from '@/components/ui/select'"
+    ],
+    "description": "Import Shadcn Select Components"
+  },
+  "Shadcn Radio Group Import": {
+    "scope": "typescript",
+    "prefix": "cn_radios",
+    "body": [
+      "import { Label } from '@/components/ui/label'",
+      "import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'"
+    ],
+    "description": "Import Shadcn Radio Group Components"
+  },
+  "Shadcn Badge Import": {
+    "scope": "typescript",
+    "prefix": "cn_badge",
+    "body": [
+      "import { Badge } from '@/components/ui/badge'"
+    ],
+    "description": "Import Shadcn Badge Component"
+  },
+  "Shadcn Checkbox Import": {
+    "scope": "typescript",
+    "prefix": "cn_checkbox",
+    "body": [
+      "import { Checkbox } from '@/components/ui/checkbox'"
+    ],
+    "description": "Import Shadcn Checkbox Component"
+  },
+  "Shadcn Combobox Import and Setup": {
+    "scope": "typescript",
+    "prefix": "cn_combobox",
+    "body": [
+      "import { Check, ChevronsUpDown } from 'lucide-vue-next'",
+      "",
+      "import { cn } from '@/utils'",
+      "import { Button } from '@/components/ui/button'",
+      "import {",
+      "  Command,",
+      "  CommandEmpty,",
+      "  CommandGroup,",
+      "  CommandInput,",
+      "  CommandItem,",
+      "  CommandList,",
+      "} from '@/components/ui/command'",
+      "import {",
+      "  Popover,",
+      "  PopoverContent,",
+      "  PopoverTrigger,",
+      "} from '@/components/ui/popover'",
+      "",
+      "const ${1:items} = [",
+      "  { value: '${2:item1}', label: '${3:Item 1}' },",
+      "  { value: '${4:item2}', label: '${5:Item 2}' },",
+      "  ${0}",
+      "]",
+      "",
+      "const open = ref(false)",
+      "const value = ref('')"
+    ],
+    "description": "Import and Setup for Shadcn Combobox Component"
+  },
+  "Shadcn Table": {
+    "scope": "HTML",
+    "prefix": "cn_table",
+    "body": [
+      "<Table>",
+      "  <TableCaption>${1:A list of your recent invoices.}</TableCaption>",
+      "  <TableHeader>",
+      "    <TableRow>",
+      "      <TableHead class=\"${2:w-[100px]}\">${3:Invoice}</TableHead>",
+      "      <TableHead>${4:Status}</TableHead>",
+      "      <TableHead>${5:Method}</TableHead>",
+      "      <TableHead class=\"${6:text-right}\">${7:Amount}</TableHead>",
+      "    </TableRow>",
+      "  </TableHeader>",
+      "  <TableBody>",
+      "    <TableRow v-for=\"${8:item} in ${9:items}\" :key=\"${8:item}.${10:id}\">",
+      "      <TableCell class=\"font-medium\">{{ ${8:item}.${11:invoice} }}</TableCell>",
+      "      <TableCell>{{ ${8:item}.${12:paymentStatus} }}</TableCell>",
+      "      <TableCell>{{ ${8:item}.${13:paymentMethod} }}</TableCell>",
+      "      <TableCell class=\"text-right\">{{ ${8:item}.${14:totalAmount} }}</TableCell>",
+      "    </TableRow>",
+      "  </TableBody>",
+      "</Table>"
+    ],
+    "description": "Shadcn Table Component"
+  },
+  "Shadcn Tooltip": {
+    "scope": "HTML",
+    "prefix": "cn_tooltip",
+    "body": [
+      "<Tooltip>",
+      "  <TooltipTrigger as-child>",
+      "    <Button variant=\"outline\">",
+      "      ${1:Hover}",
+      "    </Button>",
+      "  </TooltipTrigger>",
+      "  <TooltipContent>",
+      "    <p>${2:Add to library}</p>",
+      "  </TooltipContent>",
+      "</Tooltip>"
+    ],
+    "description": "Shadcn Tooltip Component"
+  },
+  "Shadcn Tabs": {
+    "scope": "HTML",
+    "prefix": "cn_tabs",
+    "body": [
+      "<Tabs default-value=\"${1:account}\" class=\"${2:w-[400px]}\">",
+      "  <TabsList class=\"grid w-full grid-cols-2\">",
+      "    <TabsTrigger value=\"${1:account}\"> ${3:Account} </TabsTrigger>",
+      "    <TabsTrigger value=\"${4:password}\"> ${5:Password} </TabsTrigger>",
+      "  </TabsList>",
+      "  <TabsContent value=\"${1:account}\">",
+      "    <Card>",
+      "      <CardHeader>",
+      "        <CardTitle>${3:Account}</CardTitle>",
+      "        <CardDescription>${6:Make changes to your account here. Click save when you're done.}</CardDescription>",
+      "      </CardHeader>",
+      "      <CardContent class=\"space-y-2\">",
+      "        ${7:Account...}",
+      "      </CardContent>",
+      "      <CardFooter>",
+      "        <Button>${8:Save changes}</Button>",
+      "      </CardFooter>",
+      "    </Card>",
+      "  </TabsContent>",
+      "  <TabsContent value=\"${4:password}\">",
+      "    <Card>",
+      "      <CardHeader>",
+      "        <CardTitle>${5:Password}</CardTitle>",
+      "        <CardDescription>${9:Change your password here. After saving, you'll be logged out.}</CardDescription>",
+      "      </CardHeader>",
+      "      <CardContent class=\"space-y-2\">",
+      "        ${10:Password...}",
+      "      </CardContent>",
+      "      <CardFooter>",
+      "        <Button>${11:Save password}</Button>",
+      "      </CardFooter>",
+      "    </Card>",
+      "  </TabsContent>",
+      "</Tabs>"
+    ],
+    "description": "Shadcn Tabs Component"
+  },
+  "Shadcn Card": {
+    "scope": "HTML",
+    "prefix": "cn_card",
+    "body": [
+      "<Card>",
+      "  <CardHeader>",
+      "    <CardTitle>${1:Card Title}</CardTitle>",
+      "    <CardDescription>${2:Card Description}</CardDescription>",
+      "  </CardHeader>",
+      "  <CardContent>",
+      "    ${3:Card Content}",
+      "  </CardContent>",
+      "  <CardFooter>",
+      "    ${4:Card Footer}",
+      "  </CardFooter>",
+      "</Card>"
+    ],
+    "description": "Shadcn Card Component"
+  },
+  "Shadcn Select": {
+    "scope": "HTML",
+    "prefix": "cn_select",
+    "body": [
+      "<Select>",
+      "  <SelectTrigger>",
+      "    <SelectValue placeholder=\"${1:Select a fruit}\" />",
+      "  </SelectTrigger>",
+      "  <SelectContent>",
+      "    <SelectGroup>",
+      "      <SelectLabel>${2:Fruits}</SelectLabel>",
+      "      <SelectItem value=\"${3:apple}\">",
+      "        ${4:Apple}",
+      "      </SelectItem>",
+      "      ${0}",
+      "    </SelectGroup>",
+      "  </SelectContent>",
+      "</Select>"
+    ],
+    "description": "Shadcn Select Component"
+  },
+  "Shadcn Radio Group": {
+    "scope": "HTML",
+    "prefix": "cn_radios",
+    "body": [
+      "<RadioGroup default-value=\"${1:comfortable}\">",
+      "  <div class=\"flex items-center space-x-2\">",
+      "    <RadioGroupItem id=\"${2:r1}\" value=\"${3:default}\" />",
+      "    <Label for=\"${2:r1}\">${4:Default}</Label>",
+      "  </div>",
+      "  <div class=\"flex items-center space-x-2\">",
+      "    <RadioGroupItem id=\"${5:r2}\" value=\"${6:comfortable}\" />",
+      "    <Label for=\"${5:r2}\">${7:Comfortable}</Label>",
+      "  </div>",
+      "  <div class=\"flex items-center space-x-2\">",
+      "    <RadioGroupItem id=\"${8:r3}\" value=\"${9:compact}\" />",
+      "    <Label for=\"${8:r3}\">${10:Compact}</Label>",
+      "  </div>",
+      "  ${0}",
+      "</RadioGroup>"
+    ],
+    "description": "Shadcn Radio Group Component"
+  },
+  "Shadcn Badge": {
+    "scope": "HTML",
+    "prefix": "cn_badge",
+    "body": [
+      "<Badge>${1:Badge}</Badge>"
+    ],
+    "description": "Shadcn Badge Component"
+  },
+  "Shadcn Checkbox": {
+    "scope": "HTML",
+    "prefix": "cn_checkbox",
+    "body": [
+      "<Checkbox id=\"${1:terms}\" ${2:v-model=\"checked\"} />"
+    ],
+    "description": "Shadcn Checkbox Component"
+  },
+  "Shadcn Combobox": {
+    "scope": "HTML",
+    "prefix": "cn_combobox",
+    "body": [
+      "<Popover v-model:open=\"open\">",
+      "  <PopoverTrigger as-child>",
+      "    <Button",
+      "      variant=\"outline\"",
+      "      role=\"combobox\"",
+      "      :aria-expanded=\"open\"",
+      "      class=\"w-[200px] justify-between\"",
+      "    >",
+      "      {{ value",
+      "        ? ${1:items}.find((item) => item.value === value)?.label",
+      "        : \"${2:Select item...}\" }}",
+      "      <ChevronsUpDown class=\"ml-2 h-4 w-4 shrink-0 opacity-50\" />",
+      "    </Button>",
+      "  </PopoverTrigger>",
+      "  <PopoverContent class=\"w-[200px] p-0\">",
+      "    <Command>",
+      "      <CommandInput class=\"h-9\" placeholder=\"${3:Search item...}\" />",
+      "      <CommandEmpty>${4:No item found.}</CommandEmpty>",
+      "      <CommandList>",
+      "        <CommandGroup>",
+      "          <CommandItem",
+      "            v-for=\"item in ${1:items}\"",
+      "            :key=\"item.value\"",
+      "            :value=\"item.value\"",
+      "            @select=\"(ev) => {",
+      "              if (typeof ev.detail.value === 'string') {",
+      "                value = ev.detail.value",
+      "              }",
+      "              open = false",
+      "            }\"",
+      "          >",
+      "            {{ item.label }}",
+      "            <Check",
+      "              :class=\"cn(",
+      "                'ml-auto h-4 w-4',",
+      "                value === item.value ? 'opacity-100' : 'opacity-0',",
+      "              )\"",
+      "            />",
+      "          </CommandItem>",
+      "        </CommandGroup>",
+      "      </CommandList>",
+      "    </Command>",
+      "  </PopoverContent>",
+      "</Popover>"
+    ],
+    "description": "Shadcn Combobox Component"
+  },
+}

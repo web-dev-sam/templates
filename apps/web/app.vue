@@ -11,9 +11,9 @@
 
 <template>
   <main class="text-center">
-    <h1 class="text-5xl font-bold mt-96 mb-4">
+    <h1 class="mb-4 mt-96 text-5xl font-bold">
       Welcome
-      <span class="text-gray-400 font-normal text-xl">to the future...</span>
+      <span class="text-xl font-normal text-gray-400">to the future...</span>
     </h1>
   </main>
 </template>

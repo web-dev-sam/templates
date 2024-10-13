@@ -1,5 +1,6 @@
 packages:
-  - 'apps/*'
-  - 'configs/tailwind'
-  - 'configs/ts'
-  - 'tests'
+  - "apps/*"
+  - "configs/tailwind"
+  - "configs/ts"
+  - "configs/prettier"
+  - "tests"
