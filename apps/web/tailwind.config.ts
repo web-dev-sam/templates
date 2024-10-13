@@ -3,7 +3,7 @@ import {
   default as sharedConfig,
 } from "@webry-monorepo-template/tailwind"
 
-const config: Pick<Config, "content" | "presets"> = {
+const config: Config = {
   content: ["./src/app/**/*.tsx"],
   presets: [sharedConfig],
 }
