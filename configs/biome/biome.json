@@ -36,6 +36,9 @@
             "useImportType": "off"
           }
         }
+      },
+      "formatter": {
+        "enabled": false
       }
     }
   ]

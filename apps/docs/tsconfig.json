@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "astro/tsconfigs/strictest"
-  ],
+  "extends": ["astro/tsconfigs/strictest"],
   "compilerOptions": {
     "jsx": "preserve"
   }

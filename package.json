@@ -6,6 +6,7 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "prettier": "@webry-monorepo-template/prettier",
   "scripts": {
     "dev:web": "cd apps/web && pnpm run dev",
     "dev:docs": "cd apps/docs && pnpm run dev",
@@ -16,6 +17,7 @@
     "format": "biome format --write ."
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.3"
+    "@biomejs/biome": "1.9.3",
+    "@webry-monorepo-template/prettier": "workspace:*"
   }
 }
