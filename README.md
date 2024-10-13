@@ -8,12 +8,17 @@
 - 🚄 Biome _(Linting & Formatting)_
 - ⛑️ Playwright _(E2E Tests)_
 - ✨ VSCode Tasks _(Buttons > Typing)_
+- 🧙‍♂️ VSCode Snippets _(For Shadcn, Vue, ...)_
 
 ## Getting Started
 
 - Replace all `webry-monorepo-template` package names with your own
 - `pnpm i`
 - Check pnpm scripts and structure
+
+## FAQ
+### Why is there Prettier still?
+Biome has limited support for .vue/.astro files because of the html. For these files Prettier will jump in to do the Formatting based on the same rules _(if theres a difference consider opening a PR fixing the configs or adding an issue)_.
 
 ## Contribution
 
