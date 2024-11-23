@@ -2,9 +2,9 @@
 
 This is where my newer website templates are. I will be adding more as I go along.
 
-## Quick Start
+## 🎉 Quick Start
 
-This is a bash alias to quickly spin up a new project 🎉:<br>
+This is a bash alias to quickly spin up a new project (If you use Windows you can still use it with git bash):<br>
 
 **Usage:** `get <template-name> <target-folder>`. <br>
 **Example:** `get nuxt-bun my-app`.<br>
@@ -27,3 +27,5 @@ function get() {
     fi
 }
 ```
+
+Read the respective READMEs for more information on each template.
