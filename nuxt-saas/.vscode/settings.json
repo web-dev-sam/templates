@@ -53,5 +53,13 @@
     "pcss",
     "postcss"
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Nuxtr settings
+  "nuxtr.defaultPackageManager": "pnpm",
+  "nuxtr.openItemsAfterCreation": true,
+  "nuxtr.vueFiles.firstTag": "script",
+  "nuxtr.vueFiles.style.defaultLanguage": "postcss",
+  "nuxtr.vueFiles.style.alwaysScoped": true,
+  "nuxtr.vueFiles.style.addStyleTag": false
 }
