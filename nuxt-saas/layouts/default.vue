@@ -10,22 +10,22 @@
 </script>
 
 <template>
-  <div>
-    <header class="flex">
+  <div class="container">
+    <header class="flex justify-between my-10 align-middle leading-9">
       <div>
-        <NuxtLink to="/">Logo</NuxtLink>
+        <NuxtImg src="/logo.png" alt="Logo" height="36" />
       </div>
-      <div>
+      <div class="flex gap-8 text-gray-700">
         <NuxtLink to="/features">Features</NuxtLink>
         <NuxtLink to="/blog">Blog</NuxtLink>
         <NuxtLink to="/pricing">Pricing</NuxtLink>
         <NuxtLink to="/contact">Contact</NuxtLink>
       </div>
       <div>
-        <NuxtLink to="/dashboard">Login</NuxtLink>
+        <NuxtLink to="/dashboard" class="text-gray-700">Login</NuxtLink>
       </div>
     </header>
-    <main>
+    <main class="min-h-screen">
       <slot />
     </main>
     <footer>

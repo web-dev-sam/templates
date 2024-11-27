@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     "@nuxtjs/eslint-module",
     "nuxt-security",
     "@vite-pwa/nuxt",
+    "@nuxt/fonts",
+    "@nuxt/image",
   ],
   typescript: {
     typeCheck: true,
@@ -17,6 +19,23 @@ export default defineNuxtConfig({
         target: 3.5,
       },
     },
+  },
+  fonts: {
+    families: [
+      {
+        name: "Cal Sans",
+        provider: "none",
+        src: [
+          "/fonts/CalSansSemiBold.ttf",
+          "/fonts/CalSansSemiBold.woff",
+          "/fonts/CalSansSemiBold.woff2",
+        ],
+      },
+      {
+        name: "Mona Sans",
+        provider: "google",
+      },
+    ],
   },
   vue: {
     propsDestructure: true,
@@ -33,7 +52,7 @@ export default defineNuxtConfig({
   app: {
     keepalive: true,
     head: {
-      htmlAttrs: { lang: "en", class: "dark" },
+      htmlAttrs: { lang: "en", class: "dark?" },
       viewport: "width=device-width,initial-scale=1,viewport-fit=cover",
       link: [
         { rel: "icon", href: "/favicon.ico", sizes: "any" },
