@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// TODO: Add SEO meta tags (that arent globally already there)
 useSeoMeta({
   title: "SaaS Name",
   ogTitle: "SaaS Name",
