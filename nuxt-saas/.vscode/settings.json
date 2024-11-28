@@ -70,5 +70,10 @@
   "nuxtr.vueFiles.style.addStyleTag": false,
 
   // Disable file nesting if annoying
-  "explorer.fileNesting.enabled": false
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "nuxt.config.*": "tailwind.config.*, tsconfig.*, eslint*, .prettier*, .gitignore, biome*, components.json",
+    "package.json": "bun.lockb, package-lock.json, README*"
+  }
 }
