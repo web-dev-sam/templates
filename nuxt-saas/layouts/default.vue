@@ -23,8 +23,11 @@
         <NuxtLink to="/contact" class="hover:text-gray-900">Contact</NuxtLink>
       </div>
       <div class="flex items-center">
-        <NuxtLink to="/dashboard" class="hover:text-gray-900">
-          <Icon name="lucide:log-in" :size="20" mode="svg" />
+        <NuxtLink to="/dashboard" class="hover:text-gray-900 relative">
+          <div
+            class="w-12 h-12 bg-gray-100 rounded-full absolute ml-3 mt-3 -translate-x-1/2 -translate-y-1/2 -z-10"
+          ></div>
+          <Icon name="fe:login" :size="22" mode="svg" />
         </NuxtLink>
       </div>
     </header>
