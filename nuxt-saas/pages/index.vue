@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="bg-white">
     <div class="container mx-auto px-4 pt-32 pb-20">
       <div class="max-w-3xl mx-auto text-center">
         <!-- Main Heading -->

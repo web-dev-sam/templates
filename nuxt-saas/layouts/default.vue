@@ -37,7 +37,8 @@
         </NuxtLink>
       </div>
     </header>
-    <main class="min-h-screen container">
+    <main class="min-h-[calc(100vh-207px)] container">
+      <!-- TODO: Remove nonesense min-h when more content -->
       <slot />
     </main>
     <footer class="border-t border-gray-200">
