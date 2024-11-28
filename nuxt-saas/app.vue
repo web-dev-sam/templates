@@ -3,7 +3,7 @@
 useSeoMeta({
   title: "SaaS Name",
   ogTitle: "SaaS Name",
-  ogUrl: "https://saas-name.com/",
+  ogUrl: "https://saas-template.webry.com",
   ogType: "website",
   description:
     "SaaS Name is a whatever you do, we make it easy to do it online. Join our community and grow your business with us.",
