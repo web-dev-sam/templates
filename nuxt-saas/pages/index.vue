@@ -4,18 +4,15 @@
   <div class="bg-white">
     <div class="container mx-auto px-4 pt-32 pb-20">
       <div class="max-w-3xl mx-auto text-center">
-        <!-- Main Heading -->
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Build amazing web apps faster than ever
         </h1>
 
-        <!-- Subheading -->
         <p class="text-xl text-gray-600 mb-10 leading-relaxed">
           The modern SaaS starter template that helps you launch your product in days, not months. Built with Nuxt and
           TypeScript.
         </p>
 
-        <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
             to="/dashboard"
@@ -32,7 +29,6 @@
           </NuxtLink>
         </div>
 
-        <!-- Trust Badge -->
         <div class="mt-12 text-sm text-gray-500">
           <p class="mb-4">Trusted by developers worldwide</p>
           <div class="flex justify-center items-center gap-8">

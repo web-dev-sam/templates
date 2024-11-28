@@ -1,40 +1,54 @@
 <script setup lang="ts">
-// Props & Emits
-// State
-// Computed
-// Normal code
-// Lifecycle
-// Watchers
-// Functions
+const { loggedIn, user, clear: clearSession } = useUserSession()
+const userSettingsOpen = ref(false)
+
+if (!loggedIn.value) {
+  navigateTo("/")
+}
+
+function logOut() {
+  clearSession()
+  navigateTo("/")
+}
 </script>
 
 <template>
-  <div class="container">
+  <div v-if="user" class="container">
     <header class="flex justify-between my-10 align-middle h-9 items-center text-gray-700 container">
       <div class="flex items-center">
-        <NuxtLink to="/">
+        <NuxtLink to="/dashboard">
           <NuxtImg
             src="/logo.png"
             alt="Name"
             class="h-9 saturate-[9] hue-rotate-[350deg]"
-            onerror=""
             :preload="{ fetchPriority: 'high' }"
           />
         </NuxtLink>
       </div>
       <div class="flex gap-16">
+        <NuxtLink to="/getting-started" class="hover:text-gray-900">Getting Started</NuxtLink>
         <NuxtLink to="/features" class="hover:text-gray-900">Features</NuxtLink>
-        <NuxtLink to="/blog" class="hover:text-gray-900">Blog</NuxtLink>
-        <NuxtLink to="/pricing" class="hover:text-gray-900">Pricing</NuxtLink>
-        <NuxtLink to="/contact" class="hover:text-gray-900">Contact</NuxtLink>
       </div>
-      <div class="flex items-center">
-        <NuxtLink to="/auth/signin" class="relative">
-          <div
-            class="w-12 h-12 bg-gray-100 rounded-full absolute ml-3 mt-3 -translate-x-1/2 -translate-y-1/2 -z-10"
-          ></div>
-          <Icon name="tabler:login-2" :size="22" mode="svg" class="text-gray-600 hover:text-gray-800" />
-        </NuxtLink>
+      <div class="flex items-center relative">
+        <NuxtImg
+          :src="user.picture"
+          :alt="user.name"
+          class="h-9 w-9 rounded-full"
+          role="button"
+          @click="userSettingsOpen = !userSettingsOpen"
+        ></NuxtImg>
+        <UiCommand v-model:open="userSettingsOpen" class="rounded-lg shadow-md w-[16ch] absolute top-12 right-0">
+          <UiCommandList class="my-2 mx-1">
+            <UiCommandItem value="Settings" class="py-2 cursor-pointer">
+              <Icon name="tabler:settings-2" class="mr-2 h-4 w-4" />
+              <span>Settings</span>
+            </UiCommandItem>
+            <UiCommandItem value="Logout" class="py-2 cursor-pointer" role="button" @click="logOut">
+              <Icon name="tabler:logout-2" class="mr-2 h-4 w-4" />
+              <span>Logout</span>
+            </UiCommandItem>
+          </UiCommandList>
+        </UiCommand>
       </div>
     </header>
     <main class="min-h-[calc(100vh-207px)] container">

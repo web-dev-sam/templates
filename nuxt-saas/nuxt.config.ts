@@ -5,12 +5,12 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
-    "@nuxtjs/eslint-module",
     "nuxt-security",
     "@vite-pwa/nuxt",
     "@nuxt/fonts",
     "@nuxt/image",
     "@nuxt/icon",
+    "nuxt-auth-utils",
   ],
   app: {
     keepalive: true,
@@ -62,15 +62,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  routeRules: {
-    "/": { prerender: true },
-    "/manifest.webmanifest": {
-      headers: {
-        "Content-Type": "application/manifest+json",
-        "Cache-Control": "public, max-age=0, must-revalidate",
-      },
-    },
-  },
   experimental: {
     defaults: {
       nuxtLink: {
@@ -116,12 +107,11 @@ export default defineNuxtConfig({
     nonce: true,
     csrf: true,
     hidePoweredBy: true,
-    allowedMethodsRestricter: {
-      methods: ["GET", "POST"],
-      throwError: true,
-    },
     headers: {
       crossOriginEmbedderPolicy: false,
+      contentSecurityPolicy: {
+        "img-src": ["'self'", "data:", "lh3.googleusercontent.com"],
+      },
       permissionsPolicy: {
         fullscreen: "*",
       },
