@@ -73,7 +73,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "nuxt.config.*": "tailwind.config.*, tsconfig.*, eslint*, .prettier*, .gitignore, biome*, components.json",
+    "nuxt.config.*": "tailwind.config.*, tsconfig.*, eslint*, .prettier*, .gitignore, biome*, components.json, .env*",
     "package.json": "bun.lockb, package-lock.json, README*"
   }
 }
