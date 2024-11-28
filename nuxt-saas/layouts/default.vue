@@ -13,7 +13,13 @@
     <header class="flex justify-between my-10 align-middle h-9 items-center text-gray-700 container">
       <div class="flex items-center">
         <NuxtLink to="/">
-          <NuxtImg src="/logo.png" alt="Name" class="h-9" onerror="" :preload="{ fetchPriority: 'high' }" />
+          <NuxtImg
+            src="/logo.png"
+            alt="Name"
+            class="h-9 saturate-[9] hue-rotate-[350deg]"
+            onerror=""
+            :preload="{ fetchPriority: 'high' }"
+          />
         </NuxtLink>
       </div>
       <div class="flex gap-16">
@@ -23,11 +29,11 @@
         <NuxtLink to="/contact" class="hover:text-gray-900">Contact</NuxtLink>
       </div>
       <div class="flex items-center">
-        <NuxtLink to="/dashboard" class="hover:text-gray-900 relative">
+        <NuxtLink to="/dashboard" class="relative">
           <div
             class="w-12 h-12 bg-gray-100 rounded-full absolute ml-3 mt-3 -translate-x-1/2 -translate-y-1/2 -z-10"
           ></div>
-          <Icon name="fe:login" :size="22" mode="svg" />
+          <Icon name="tabler:login-2" :size="22" mode="svg" class="text-gray-600 hover:text-gray-800" />
         </NuxtLink>
       </div>
     </header>
@@ -38,7 +44,7 @@
       <div class="container mx-auto py-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="flex items-center gap-2">
-            <NuxtImg src="/logo.png" alt="Name" class="h-6" />
+            <NuxtImg src="/logo.png" alt="Name" class="h-6 saturate-[9] hue-rotate-[350deg]" />
             <span class="text-gray-600 text-sm">&copy; 2025 Webry</span>
           </div>
 
@@ -49,13 +55,13 @@
 
           <div class="flex gap-4 text-gray-600">
             <NuxtLink to="https://twitter.com/webry" target="_blank">
-              <Icon name="lucide:twitter" size="20px" class="hover:text-gray-900" />
+              <Icon name="simple-icons:twitter" size="20px" class="hover:text-gray-800" />
             </NuxtLink>
             <NuxtLink to="https://github.com/webry" target="_blank">
-              <Icon name="lucide:github" size="20px" class="hover:text-gray-900" />
+              <Icon name="simple-icons:github" size="20px" class="hover:text-gray-800" />
             </NuxtLink>
             <NuxtLink to="https://linkedin.com/company/webry" target="_blank">
-              <Icon name="lucide:linkedin" size="20px" class="hover:text-gray-900" />
+              <Icon name="simple-icons:linkedin" size="20px" class="hover:text-gray-800" />
             </NuxtLink>
           </div>
         </div>
