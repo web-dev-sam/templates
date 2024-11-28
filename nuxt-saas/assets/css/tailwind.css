@@ -73,12 +73,17 @@
     @apply border-border;
   }
   :root {
-    font-family: "Mona Sans", sans-serif; /* Cal Sans */
+    font-family: "Mona Sans 400", sans-serif; /* Cal Sans */
   }
   body {
     @apply bg-background text-foreground;
   }
   a {
     display: inline-block;
+  }
+
+  .font-500 {
+    font-weight: 500;
+    font-family: "Mona Sans 500", sans-serif;
   }
 }
