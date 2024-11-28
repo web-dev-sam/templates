@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "nuxt-security",
-    "@vite-pwa/nuxt",
     "@nuxt/fonts",
     "@nuxt/image",
     "@nuxt/icon",
@@ -117,24 +116,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  pwa: {
-    mode: "production",
-    scope: "/",
-    srcDir: "./public",
-    filename: "dev-sw.ts",
-    strategies: "injectManifest",
-    injectRegister: false,
-    includeManifestIcons: false,
-    manifest: false,
-    injectManifest: {
-      globPatterns: [
-        "**/*.{js,json,css,html,txt,svg,png,ico,webp,woff,woff2,ttf,eot,otf,wasm}",
-      ],
-      globIgnores: ["emojis/**", "manifest**.webmanifest"],
-    },
-    devOptions: {
-      enabled: true,
-      type: "module",
-    },
+  nitro: {
+    preset: "bun",
   },
 })
