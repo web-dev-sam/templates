@@ -3,13 +3,7 @@ export default {
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  content: [
-    "./src/**/*.vue",
-    "./src/**/*.html",
-    "./src/**/*.ts",
-    "./nuxt.config.ts",
-    "./error.vue",
-  ],
+  content: ["./src/**/*.vue", "./src/**/*.html", "./src/**/*.ts", "./nuxt.config.ts", "./error.vue"],
 
   theme: {
     container: {
