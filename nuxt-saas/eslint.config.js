@@ -7,5 +7,6 @@ export default antfu({
     "style/quotes": ["error", "double"],
     "vue/singleline-html-element-content-newline": "off",
     "vue/html-self-closing": "off",
+    "ts/consistent-type-definitions": "off",
   },
 })

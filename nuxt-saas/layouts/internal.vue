@@ -31,7 +31,7 @@ function logOut() {
       <div class="flex items-center relative gap-8">
         <Icon name="heroicons:bell" class="w-6 h-6" />
         <NuxtImg
-          :src="user?.picture ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
+          :src="user?.picture ?? user?.avatar_url ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
           :alt="user?.name ?? 'User Name'"
           class="h-9 w-9 rounded-full"
           role="button"

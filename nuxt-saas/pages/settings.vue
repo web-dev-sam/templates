@@ -11,22 +11,7 @@ const deleteConfirmation = ref("")
 const isDeleting = ref(false)
 
 async function handleDeleteAccount() {
-  if (deleteConfirmation.value !== user.value.email) {
-    return
-  }
-
-  isDeleting.value = true
-  try {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    // Handle successful deletion
-    navigateTo("/auth/login")
-  } catch (error) {
-    console.error("Error deleting account:", error)
-  } finally {
-    isDeleting.value = false
-    showDeleteModal.value = false
-  }
+  // TODO
 }
 </script>
 
@@ -53,7 +38,10 @@ async function handleDeleteAccount() {
         <div class="p-6">
           <!-- Avatar -->
           <div class="flex items-center mb-8">
-            <img :src="user.picture" :alt="`${user.givenName}'s avatar`" class="w-20 h-20 rounded-full bg-gray-200" />
+            <img
+              :src="user?.picture ?? user?.avatar_url ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
+              class="w-20 h-20 rounded-full bg-gray-200"
+            />
             <div class="ml-6">
               <p class="text-sm text-gray-500">Profile Picture</p>
             </div>
@@ -64,21 +52,21 @@ async function handleDeleteAccount() {
             <div>
               <label class="block text-sm font-medium text-gray-700">First Name</label>
               <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user.given_name }}
+                {{ user?.given_name ?? user?.name ?? "??" }}
               </p>
             </div>
 
             <div>
               <label class="block text-sm font-medium text-gray-700">Last Name</label>
               <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user.family_name }}
+                {{ user?.family_name ?? "??" }}
               </p>
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Email</label>
               <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user.email }}
+                {{ user.email ?? "??" }}
               </p>
             </div>
           </div>

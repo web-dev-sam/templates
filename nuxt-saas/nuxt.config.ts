@@ -16,6 +16,8 @@ export default defineNuxtConfig({
     authOrigin: "",
     oauthGoogleClientId: "",
     oauthGoogleClientPassword: "",
+    oauthGithubClientId: "",
+    oauthGithubClientPassword: "",
   },
   app: {
     keepalive: true,
@@ -225,7 +227,12 @@ export default defineNuxtConfig({
     headers: {
       crossOriginEmbedderPolicy: false,
       contentSecurityPolicy: {
-        "img-src": ["'self'", "data:", "lh3.googleusercontent.com"],
+        "img-src": [
+          "'self'",
+          "data:",
+          "lh3.googleusercontent.com",
+          "avatars.githubusercontent.com",
+        ],
       },
       permissionsPolicy: {
         fullscreen: "*",
