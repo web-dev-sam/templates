@@ -23,8 +23,8 @@
         </NuxtLink>
       </div>
       <div class="flex gap-16">
+        <NuxtLink to="/" class="hover:text-gray-900">Home</NuxtLink>
         <NuxtLink to="/features" class="hover:text-gray-900">Features</NuxtLink>
-        <NuxtLink to="/blog" class="hover:text-gray-900">Blog</NuxtLink>
         <NuxtLink to="/pricing" class="hover:text-gray-900">Pricing</NuxtLink>
         <NuxtLink to="/contact" class="hover:text-gray-900">Contact</NuxtLink>
       </div>
@@ -55,14 +55,11 @@
           </div>
 
           <div class="flex gap-4 text-gray-600">
-            <NuxtLink to="https://twitter.com/webry" target="_blank">
-              <Icon name="simple-icons:twitter" size="20px" class="hover:text-gray-800" />
+            <NuxtLink to="https://dev.to/samuel-braun" target="_blank">
+              <Icon name="simple-icons:devdotto" size="20px" class="hover:text-gray-800" />
             </NuxtLink>
-            <NuxtLink to="https://github.com/webry" target="_blank">
+            <NuxtLink to="https://github.com/web-dev-sam/templates/tree/main/nuxt-saas" target="_blank">
               <Icon name="simple-icons:github" size="20px" class="hover:text-gray-800" />
-            </NuxtLink>
-            <NuxtLink to="https://linkedin.com/company/webry" target="_blank">
-              <Icon name="simple-icons:linkedin" size="20px" class="hover:text-gray-800" />
             </NuxtLink>
           </div>
         </div>

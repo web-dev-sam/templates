@@ -15,7 +15,7 @@
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
-            to="/dashboard"
+            to="/auth/signin"
             class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-rose-600 hover:bg-rose-700 transition-colors"
           >
             Get Started
