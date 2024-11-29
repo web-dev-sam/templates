@@ -11,6 +11,12 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-auth-utils",
   ],
+  runtimeConfig: {
+    sessionPassword: "",
+    authOrigin: "",
+    oauthGoogleClientId: "",
+    oauthGoogleClientPassword: "",
+  },
   app: {
     keepalive: true,
     head: {
