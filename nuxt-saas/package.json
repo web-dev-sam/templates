@@ -37,6 +37,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.11.2",
+    "@iconify-json/simple-icons": "^1.2.13",
+    "@iconify-json/tabler": "^1.2.8",
     "eslint": "^9.15.0",
     "eslint-plugin-format": "^0.1.2",
     "prettier": "^3.4.1",
