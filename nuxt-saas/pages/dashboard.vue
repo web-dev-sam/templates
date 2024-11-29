@@ -91,8 +91,16 @@ function getActivityColor(type: RecentActivity["type"]) {
 
 <template>
   <div>
-    <main class="max-w-7xl mx-auto py-8">
-      <h1 class="text-3xl text-center mb-12 font-semibold">Dashboard</h1>
+    <main class="max-w-7xl mx-auto pb-8">
+      <nav class="bg-white border-b border-gray-200 mb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+            <div class="flex items-center">
+              <h1 class="text-xl font-semibold text-gray-900">Dashboard</h1>
+            </div>
+          </div>
+        </div>
+      </nav>
       <!-- Stats Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <div v-for="stat in stats" :key="stat.name" class="bg-white rounded-lg p-6 border-[1px] border-gray-100">

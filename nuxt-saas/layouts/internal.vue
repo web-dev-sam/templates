@@ -40,10 +40,12 @@ function logOut() {
         ></NuxtImg>
         <UiCommand v-model:open="userSettingsOpen" class="rounded-lg shadow-md w-[16ch] absolute top-12 right-0">
           <UiCommandList class="my-2 mx-1">
-            <UiCommandItem value="Settings" class="py-2 cursor-pointer">
-              <Icon name="tabler:settings-2" class="mr-2 h-4 w-4" />
-              <span>Settings</span>
-            </UiCommandItem>
+            <NuxtLink to="/settings" class="block">
+              <UiCommandItem value="Settings" class="py-2 cursor-pointer">
+                <Icon name="tabler:settings-2" class="mr-2 h-4 w-4" />
+                <span>Settings</span>
+              </UiCommandItem>
+            </NuxtLink>
             <UiCommandItem value="Logout" class="py-2 cursor-pointer" role="button" @click="logOut">
               <Icon name="tabler:logout-2" class="mr-2 h-4 w-4" />
               <span>Logout</span>
