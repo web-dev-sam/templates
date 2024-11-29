@@ -26,10 +26,11 @@ function logOut() {
         </NuxtLink>
       </div>
       <div class="flex gap-16">
+        <NuxtLink to="/dashboard" class="hover:text-gray-900">Dashboard</NuxtLink>
         <NuxtLink to="/getting-started" class="hover:text-gray-900">Getting Started</NuxtLink>
-        <NuxtLink to="/features" class="hover:text-gray-900">Features</NuxtLink>
       </div>
-      <div class="flex items-center relative">
+      <div class="flex items-center relative gap-8">
+        <Icon name="heroicons:bell" class="w-6 h-6" />
         <NuxtImg
           :src="user.picture"
           :alt="user.name"

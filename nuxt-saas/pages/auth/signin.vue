@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { loggedIn } = useUserSession()
+if (loggedIn.value) {
+  navigateTo("/dashboard")
+}
+</script>
 
 <template>
   <div class="bg-white min-h-screen">

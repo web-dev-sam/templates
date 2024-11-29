@@ -1,4 +1,9 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: "auth",
+  layout: "internal",
+})
+
 interface SetupStep {
   title: string
   description: string
