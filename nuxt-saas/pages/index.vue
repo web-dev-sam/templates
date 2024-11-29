@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// const { data } = useAPI("/products")
+</script>
 
 <template>
   <div class="bg-white">
