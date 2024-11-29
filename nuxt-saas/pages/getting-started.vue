@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: "auth",
   layout: "internal",
+  middleware: "auth",
 })
 
 interface SetupStep {

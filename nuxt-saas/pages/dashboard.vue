@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
-  middleware: "auth",
   layout: "internal",
+  middleware: "auth",
 })
 
 interface Stat {

@@ -1,13 +1,6 @@
-import { defineNuxtRouteMiddleware, navigateTo, useUserSession } from "#imports"
-
-export default defineNuxtRouteMiddleware(async (to, _from) => {
+export default defineNuxtRouteMiddleware(async () => {
   const { loggedIn } = useUserSession()
-  if (loggedIn.value) {
-    if (to.path.includes("/auth/signin")) {
-      return navigateTo("/dashboard")
-    }
-    return
+  if (!loggedIn.value) {
+    return navigateTo("/")
   }
-
-  return navigateTo("/auth/signin")
 })

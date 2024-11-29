@@ -1,10 +1,6 @@
 <script setup lang="ts">
-const { loggedIn, user, clear: clearSession } = useUserSession()
+const { user, clear: clearSession } = useUserSession()
 const userSettingsOpen = ref(false)
-
-if (!loggedIn.value) {
-  navigateTo("/")
-}
 
 function logOut() {
   clearSession()
@@ -13,7 +9,7 @@ function logOut() {
 </script>
 
 <template>
-  <div v-if="user" class="container">
+  <div class="container">
     <header class="flex justify-between my-10 align-middle h-9 items-center text-gray-700 container">
       <div class="flex items-center">
         <NuxtLink to="/dashboard">

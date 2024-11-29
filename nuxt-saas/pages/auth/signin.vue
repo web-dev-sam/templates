@@ -1,8 +1,8 @@
 <script setup lang="ts">
-definePageMeta({
-  middleware: "auth",
-  layout: "internal",
-})
+const { loggedIn } = useUserSession()
+if (loggedIn.value) {
+  navigateTo("/dashboard")
+}
 </script>
 
 <template>
