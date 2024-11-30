@@ -8,5 +8,6 @@ export default antfu({
     "vue/singleline-html-element-content-newline": "off",
     "vue/html-self-closing": "off",
     "ts/consistent-type-definitions": "off",
+    "node/prefer-global/process": "off",
   },
 })

@@ -42,8 +42,9 @@ async function handleDeleteAccount() {
           <!-- Avatar -->
           <div class="flex items-center mb-8">
             <img
-              :src="user?.picture ?? user?.avatar_url ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
-              class="w-20 h-20 rounded-full bg-gray-200"
+              :src="user?.profile_picture ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
+              :alt="user?.name ?? 'User Name'"
+              class="w-20 h-20 rounded-full bg-gray-200 bg-gradient-to-r from-purple-500 to-pink-500"
             />
             <div class="ml-6">
               <p class="text-sm text-gray-500">Profile Picture</p>
@@ -51,18 +52,11 @@ async function handleDeleteAccount() {
           </div>
 
           <!-- Personal Information -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-6">
             <div>
-              <label class="block text-sm font-medium text-gray-700">First Name</label>
+              <label class="block text-sm font-medium text-gray-700">User Name</label>
               <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user?.given_name ?? user?.name ?? "??" }}
-              </p>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700">Last Name</label>
-              <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user?.family_name ?? "??" }}
+                {{ user?.user_name ?? user?.name ?? "??" }}
               </p>
             </div>
 

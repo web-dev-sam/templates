@@ -32,6 +32,7 @@
     "nuxt": "^3.14.1592",
     "nuxt-auth-utils": "^0.5.5",
     "nuxt-security": "^2.1.4",
+    "postgres": "^3.4.5",
     "radix-vue": "^1.9.10",
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.5.5",
@@ -51,6 +52,20 @@
     "shadcn-vue": "^0.11.3",
     "typescript": "~5.6",
     "vue-tsc": "^2.1.10"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "linux",
+        "current"
+      ],
+      "cpu": [
+        "x64"
+      ],
+      "libc": [
+        "glibc"
+      ]
+    }
   },
   "overrides": {
     "vite-plugin-checker": "0.8.0",
