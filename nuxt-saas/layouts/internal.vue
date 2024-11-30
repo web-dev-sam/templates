@@ -3,7 +3,7 @@ const { user, clear: clearSession } = useUserSession()
 const userSettingsOpen = ref(false)
 
 const ppseed = useCookie("ppicseed")
-ppseed.value = ppseed.value || Math.floor(Math.random() * 16) + 1
+ppseed.value = (ppseed.value || Math.floor(Math.random() * 16) + 1).toString() ?? "1"
 
 function logOut() {
   clearSession()

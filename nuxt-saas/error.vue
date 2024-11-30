@@ -23,7 +23,7 @@ const _ = defineProps({
 
       <button
         class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-rose-600 hover:bg-rose-700 transition-colors"
-        @click="handleGoHome"
+        @click="() => {}"
       >
         <Icon name="heroicons:home" class="w-5 h-5 mr-2" />
         Go Home
