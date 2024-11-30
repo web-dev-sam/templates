@@ -1,51 +1,23 @@
-export type GoogleUser = {
-  acctype: "Google"
-  email: string
-  email_verified: boolean
-  family_name: string
-  given_name: string
-  name: string
-  picture: string
-  sub: string
-}
-
-export type GithubUser = {
-  acctype: "Github"
-  login: string
-  avatar_url: string
-  gravatar_id: string
-  type: string
-  name: string
-  email: string
-}
-
 declare module "#auth-utils" {
   interface User {
-    acctype: "Github" | "Google"
+    name: string | null
+    email: string | null // Unique identifier (can only have one account per email)
+    email_verified: Date | null // Github defaults to false
 
-    // Google
-    email: string
-    email_verified: boolean
-    family_name: string
-    given_name: string
-    name: string
-    picture: string
-    sub: string
-
-    // Github
-    login: string
-    avatar_url: string
-    gravatar_id: string
-    type: string
-    name: string
-    email: string
+    profile_picture: string | null // Github: avatar_url/gravatar_id, Google: picture
+    user_name: string | null // Github: login, Google: null
   }
 
   interface UserSession {
-    // Add your own fields
+    user: User
   }
 
   interface SecureSessionData {
-    // Add your own fields
+    account_id: number
+    github_id: number | null
+    google_id: string | null
+    provider: "Google" | "Github"
   }
 }
+
+export {} // Ensure this file is treated as a module

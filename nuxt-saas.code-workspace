@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "nuxt-saas"
+    }
+  ],
+  "settings": {
+    "editor.detectIndentation": false
+  }
+}

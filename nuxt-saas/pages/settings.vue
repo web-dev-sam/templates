@@ -4,6 +4,9 @@ definePageMeta({
   middleware: "auth",
 })
 
+const ppseed = useCookie("ppicseed")
+ppseed.value = (ppseed.value || Math.floor(Math.random() * 16) + 1).toString() ?? "1"
+
 const { user } = useUserSession()
 
 const showDeleteModal = ref(false)
@@ -39,8 +42,9 @@ async function handleDeleteAccount() {
           <!-- Avatar -->
           <div class="flex items-center mb-8">
             <img
-              :src="user?.picture ?? user?.avatar_url ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
-              class="w-20 h-20 rounded-full bg-gray-200"
+              :src="user?.profile_picture ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
+              :alt="user?.name ?? 'User Name'"
+              class="w-20 h-20 rounded-full bg-gray-200 bg-gradient-to-r from-purple-500 to-pink-500"
             />
             <div class="ml-6">
               <p class="text-sm text-gray-500">Profile Picture</p>
@@ -48,25 +52,18 @@ async function handleDeleteAccount() {
           </div>
 
           <!-- Personal Information -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-6">
             <div>
-              <label class="block text-sm font-medium text-gray-700">First Name</label>
+              <label class="block text-sm font-medium text-gray-700">User Name</label>
               <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user?.given_name ?? user?.name ?? "??" }}
-              </p>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700">Last Name</label>
-              <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user?.family_name ?? "??" }}
+                {{ user?.user_name ?? user?.name ?? "??" }}
               </p>
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-sm font-medium text-gray-700">Email</label>
               <p class="mt-1 p-3 bg-gray-50 rounded-md text-gray-900">
-                {{ user.email ?? "??" }}
+                {{ user?.email ?? "??" }}
               </p>
             </div>
           </div>
@@ -98,7 +95,7 @@ async function handleDeleteAccount() {
         <h3 class="text-lg font-medium text-gray-900 mb-4">Delete Account</h3>
         <p class="text-sm text-gray-500 mb-4">
           This action cannot be undone. To confirm, please type your email address:
-          <span class="font-medium text-gray-900">{{ user.email }}</span>
+          <span class="font-medium text-gray-900">{{ user?.email ?? "??" }}</span>
         </p>
 
         <input
@@ -116,7 +113,7 @@ async function handleDeleteAccount() {
             Cancel
           </button>
           <button
-            :disabled="deleteConfirmation !== user.email || isDeleting"
+            :disabled="deleteConfirmation !== user?.email || isDeleting"
             class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 disabled:cursor-not-allowed"
             @click="handleDeleteAccount"
           >

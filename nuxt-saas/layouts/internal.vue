@@ -3,7 +3,7 @@ const { user, clear: clearSession } = useUserSession()
 const userSettingsOpen = ref(false)
 
 const ppseed = useCookie("ppicseed")
-ppseed.value = ppseed.value || Math.floor(Math.random() * 16) + 1
+ppseed.value = (ppseed.value || Math.floor(Math.random() * 16) + 1).toString() ?? "1"
 
 function logOut() {
   clearSession()
@@ -31,9 +31,9 @@ function logOut() {
       <div class="flex items-center relative gap-8">
         <Icon name="heroicons:bell" class="w-6 h-6" />
         <NuxtImg
-          :src="user?.picture ?? user?.avatar_url ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
+          :src="user?.profile_picture ?? `/img/profile-placeholder/thumbs-${ppseed}.png`"
           :alt="user?.name ?? 'User Name'"
-          class="h-9 w-9 rounded-full"
+          class="h-9 w-9 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"
           role="button"
           @click="userSettingsOpen = !userSettingsOpen"
         ></NuxtImg>

@@ -1,0 +1,1 @@
+cd nuxt-saas && pnpm run build
