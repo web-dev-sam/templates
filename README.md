@@ -9,9 +9,6 @@ _A monorepo template using Nuxt/Astro/Tailwind/Shadcn. 🧱_
 
 &nbsp;
 
-## Why does this exist?
-1. This is where my newer website templates are. I will be adding more as I go along.
-
 ## Quick start 🎉
 
 This is a bash alias to quickly spin up a new project (If you use Windows you can still use it with git bash):<br>
